@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Fira+Sans:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+  
+  min-height: 60px;
+  background: #1abc9c;
+  color: white;
+  padding: 10px;
+ 
+}
+h1{
+    font-family: 'Fira Sans';
+}
+form{
+    margin-top: 20px;
+    
+}
+.flex{
+    display: flex;
+    gap: 7px;
+    margin-left: 5% ;
+}
+label, input{
+
+    display: block;
+}
+label{
+    font-weight: bold;
+}
+input[type=text]{
+    width:310px;
+    height: 7px;
+    padding: 15px;
+}
+.inputWrapper label{
+    display:block;
+  }
+button {
+    margin-left:45%;
+    text-align: center;
+    width:140px;
+    height: 7px;
+    padding: 15px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    background: #33C3F0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+button :hover{
+    background: blue;
+}
+select{
+    width:200px;
+    height: 40px;
+   
+}
+#add-book{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+  
+}
+.table-section{
+    text-align: center;
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#book-list{
+  
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+#book-list thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+#book-list th,
+#book-list td {
+    padding: 12px 15px;
+}
+#book-list tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#book-list tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#book-list tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+#book-list tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}

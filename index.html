@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>JavaScript Library</h1>
+    </header>
+
+    <form action = '#'class="form" action="">
+        <div class = "flex">
+        <div class = "inputWrapper">
+        <label for="title">Title:</label>
+        <input type="text" id="titleInput" placeholder="Title" name="title">
+    </div>
+    <div class = "inputWrapper">
+        <label for="author">Author</label>
+        <input type="text" id="authorInput" placeholder="Author Name" name="author" >
+        </div>
+        <div class = "inputWrapper">
+        <label for="pages">Pages</label>
+        <input type="text" id="pagesInput" placeholder="Pages" name="pages" >
+          </div>
+          <div class = "inputWrapper">
+            <label for="read">Status</label>
+            <select id="readInput" name="read">
+                <option value="read">Read</option>
+                <option value="not read">Not Read</option>
+              </select>
+    </div>
+</div>
+    <div class = "submit-section">
+    <button onclick="addBookToLibrary()" type = "submit" >
+        <p id = "add-book">Add Book</p>
+      </button>
+    </div>
+      </form>
+      
+<section class = "table-section">
+<table id = "book-list">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+           
+        </tr>
+        <tr>
+           
+        </tr>
+        
+        <!-- and so on... -->
+    </tbody>
+    </table>
+</section>
+
+   <script src = "script.js"></script>
+</body>
+</html>
