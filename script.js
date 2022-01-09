@@ -14,7 +14,7 @@ function Book(title,author,pages) {
   this.title = title;
   this.author = author;
   this.pages = pages;
-  this.readBook = "read";
+  this.readBook = "Read";
   this.info = function(){
       console.log(`The title of the book is ${title}, the author is ${author},there are ${pages} pages in the book`);
   }
@@ -49,10 +49,12 @@ function displayBooks(){
         let authorCell = row.insertCell(1);
         let pageCell = row.insertCell(2);
         let statusCell = row.insertCell(3);
+        let deleteCell = row.insertCell(4);
         titleCell.innerHTML = `${myLibrary[currentBook].title}`;
         authorCell.innerHTML = `${myLibrary[currentBook].author}`;
         pageCell.innerHTML = `${myLibrary[currentBook].pages}`;
         statusCell.innerHTML = `${myLibrary[currentBook].readBook}`;
+        deleteCell.innerHTML = "Toggle";
         console.log(currentBook);
     // }
 }
