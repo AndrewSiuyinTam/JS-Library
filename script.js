@@ -10,6 +10,11 @@ let authorInput = document.getElementById('authorInput');
 let titleInput = document.getElementById('titleInput');
 let pagesInput = document.getElementById('pagesInput');
 let readInput = document.getElementById('readInput');
+let imageUrl = "<img src=\"/Users/andrewtam/JS-Library/JS-Library/images/x.png\" width=\"20px\" height=\"25px\">";
+
+let deleteRow = 0;
+        
+
 function Book(title,author,pages) {
   this.title = title;
   this.author = author;
@@ -49,14 +54,60 @@ function displayBooks(){
         let authorCell = row.insertCell(1);
         let pageCell = row.insertCell(2);
         let statusCell = row.insertCell(3);
-        let deleteCell = row.insertCell(4);
+        deleteRow = currentRow;
+        // <div id = 'delete'>
+        // <img src = 'x.png'>
+        // </div>
+
+        // Delete Declaration and Functionality
+        let deleteButton = document.createElement('button');
+        deleteButton.id = 'delete';
+        let img = document.createElement("img");
+        img.src = "/Users/andrewtam/JS-Library/JS-Library/images/x.png";
+        img.height = '25';
+        img.width = '20';
+        deleteButton.appendChild(img);
+        deleteButton.addEventListener('click',function(){
+            document.getElementById('book-list').deleteRow(deleteButton.closest('tr').rowIndex);
+        });
+
+        //Toggle Declaration and Functionality
+        let toggle = document.createElement('button');
+        toggle.id = 'changeStatus';
+        toggle.textContent = "Change Status";
+        toggle.addEventListener('click',function(){
+            if(statusCell.innerHTML = 'Read'){
+                statusCell.innerHTML = 'Not Read';
+            }
+            else if(statusCell.innerHTML = 'Not Read'){
+                statusCell.innerHTML = 'Read';
+            }
+        });
+
+        
+        // document.getElementById("delete").appendChild(imageUrl);
+        let toggleCell = row.insertCell(4);
+        let deleteCell = row.insertCell(5);
         titleCell.innerHTML = `${myLibrary[currentBook].title}`;
         authorCell.innerHTML = `${myLibrary[currentBook].author}`;
         pageCell.innerHTML = `${myLibrary[currentBook].pages}`;
         statusCell.innerHTML = `${myLibrary[currentBook].readBook}`;
-        deleteCell.innerHTML = "Toggle";
+        deleteCell.appendChild(deleteButton);
+        toggleCell.appendChild(toggle);
+        currentRow+=1;
         console.log(currentBook);
+
+        
+           
+        
+        
     // }
+}
+function deleteBook(){
+    displayBooks();
+    deleteDiv.createElement('p');
+   
+
 }
 function testFunction(title,author,pages){
     let testBook = new Book(title,author,pages);
@@ -64,8 +115,21 @@ function testFunction(title,author,pages){
     displayBooks();
     currentBook+=1;
 }
+function clearAll(){
+    // myLibrary = [];
+    
+  var tb = document.getElementById('book-list');
+  while(tb.rows.length > 1) {
+  tb.deleteRow(1);
+}
+}
+
+
+
 testFunction('Harry Potter','JK Rowling',69);
 testFunction('Intelligent Investor','Benjamin Graham',435);
+testFunction('Programming With Mosh','Mosh',100);
+
 // addBookToLibrary('Fundamentals','JK Rowling',69);
 // addBookToLibrary('','JK Rowling',69);
 

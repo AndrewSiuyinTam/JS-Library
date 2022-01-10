@@ -65,6 +65,12 @@ select{
     margin-bottom: 15px;
   
 }
+.submit-section{
+    
+    margin-left: -160px;
+    display: flex;
+    gap: 15px;
+}
 .table-section{
     text-align: center;
     margin-top: 45px;
@@ -108,4 +114,31 @@ select{
 #book-list tbody tr.active-row {
     font-weight: bold;
     color: #009879;
+}
+#clear-button{
+    
+    width:140px;
+    height: 7px;
+    padding: 15px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    background: rgb(236, 81, 61);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#changeStatus{
+    width: 85px;
+    height:25px;
+    margin-bottom: 10px;
+    background: orange;
+    font-weight: bold;
+    text-align: center;
+}
+#delete{
+    border: none;
+    background: none;
+    margin-top: 5px;
 }
