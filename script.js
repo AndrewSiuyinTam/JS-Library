@@ -15,14 +15,24 @@ let imageUrl = "<img src=\"/Users/andrewtam/JS-Library/JS-Library/images/x.png\"
 let deleteRow = 0;
         
 
-function Book(title,author,pages) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.readBook = "Read";
-  this.info = function(){
-      console.log(`The title of the book is ${title}, the author is ${author},there are ${pages} pages in the book`);
-  }
+// function Book(title,author,pages) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.readBook = "Read";
+//   this.info = function(){
+//       console.log(`The title of the book is ${title}, the author is ${author},there are ${pages} pages in the book`);
+//   }
+// }
+
+//This is class syntax for the constructor
+class Book {
+    constructor(title,author,pages){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+
 }
 function addBookToLibrary(title,author,pages) {
      title = titleInput.value;
